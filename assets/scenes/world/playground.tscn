@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://i0y124epd86t"]
+
+[ext_resource type="PackedScene" uid="uid://b3ro836dn6fpo" path="res://assets/2d/player/player.tscn" id="1_oxbgs"]
+
+[sub_resource type="Gradient" id="Gradient_0fp0t"]
+offsets = PackedFloat32Array(0.98, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oxbgs"]
+gradient = SubResource("Gradient_0fp0t")
+width = 32
+height = 32
+fill_from = Vector2(1, 1)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te6bm"]
+size = Vector2(32, 31.91111)
+
+[node name="Playground" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, 180.00002)
+scale = Vector2(1, 11.250001)
+texture = SubResource("GradientTexture2D_oxbgs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+shape = SubResource("RectangleShape2D_te6bm")
+
+[node name="Sprite2Dq2" type="Sprite2D" parent="."]
+position = Vector2(624, 180.00002)
+scale = Vector2(1, 11.250001)
+texture = SubResource("GradientTexture2D_oxbgs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2Dq2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2Dq2/StaticBody2D"]
+position = Vector2(0, -0.044444084)
+shape = SubResource("RectangleShape2D_te6bm")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(322, 351)
+scale = Vector2(19.875, 0.56250054)
+texture = SubResource("GradientTexture2D_oxbgs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/StaticBody2D"]
+shape = SubResource("RectangleShape2D_te6bm")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(326, 9)
+scale = Vector2(19.875, 0.56250054)
+texture = SubResource("GradientTexture2D_oxbgs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D4/StaticBody2D"]
+shape = SubResource("RectangleShape2D_te6bm")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(341.00003, 316)
+scale = Vector2(2.5624995, 1.7031248)
+texture = SubResource("GradientTexture2D_oxbgs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D5/StaticBody2D"]
+shape = SubResource("RectangleShape2D_te6bm")
+
+[node name="Player" parent="." instance=ExtResource("1_oxbgs")]
+position = Vector2(125, 75)

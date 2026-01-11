@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://b3ro836dn6fpo"]
+
+[ext_resource type="Script" uid="uid://c8xgx6vtt7cej" path="res://assets/2d/player/scripts/player.gd" id="1_050fp"]
+[ext_resource type="Script" uid="uid://b64iit0oeovve" path="res://assets/2d/player/states/grounded.gd" id="2_fhb3x"]
+[ext_resource type="Script" uid="uid://bt5bw7dp02ar5" path="res://assets/2d/player/states/aired.gd" id="2_pdgik"]
+[ext_resource type="Script" uid="uid://chcw5dwxog013" path="res://assets/2d/player/states/run.gd" id="3_55eqc"]
+[ext_resource type="Script" uid="uid://btfaqga4wqtfh" path="res://assets/2d/player/states/idle.gd" id="4_2hrk4"]
+[ext_resource type="Script" uid="uid://dwwjcp8up2q5k" path="res://assets/2d/player/states/jump.gd" id="7_gkvgs"]
+[ext_resource type="Script" uid="uid://d34hngdsurn27" path="res://assets/2d/player/states/fall.gd" id="8_1a28h"]
+[ext_resource type="Script" uid="uid://bbjnxkcnjvy71" path="res://assets/2d/player/states/dash.gd" id="8_pdgik"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dm8tg"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dm8tg"]
+size = Vector2(32, 32)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_050fp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_dm8tg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dm8tg")
+
+[node name="States" type="Node" parent="."]
+
+[node name="Idle" type="Node" parent="States"]
+unique_name_in_owner = true
+script = ExtResource("4_2hrk4")
+
+[node name="Aired" type="Node" parent="States"]
+script = ExtResource("2_pdgik")
+
+[node name="Grounded" type="Node" parent="States"]
+script = ExtResource("2_fhb3x")
+
+[node name="Run" type="Node" parent="States"]
+unique_name_in_owner = true
+script = ExtResource("3_55eqc")
+
+[node name="Jump" type="Node" parent="States"]
+unique_name_in_owner = true
+script = ExtResource("7_gkvgs")
+
+[node name="Fall" type="Node" parent="States"]
+unique_name_in_owner = true
+script = ExtResource("8_1a28h")
+
+[node name="Dash" type="Node" parent="States"]
+unique_name_in_owner = true
+script = ExtResource("8_pdgik")
+
+[node name="Lable" type="Label" parent="."]
+offset_left = -18.0
+offset_top = -44.0
+offset_right = 24.0
+offset_bottom = -21.0
+text = "Label"
