@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c425jgnm3jjmw"
-path="res://.godot/imported/forgotten_forest_example_tileset.png-5afb94396b461226b8cb9d1af492ad37.ctex"
+path="res://.godot/imported/forgotten_forest_example_tileset.png-9e58716ddd2b4c7a6d6881ef0464a128.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2d/tilesets/forgotten_forest_example_tileset.png"
-dest_files=["res://.godot/imported/forgotten_forest_example_tileset.png-5afb94396b461226b8cb9d1af492ad37.ctex"]
+source_file="res://assets/2d/sprites/forgotten_forest_example_tileset.png"
+dest_files=["res://.godot/imported/forgotten_forest_example_tileset.png-9e58716ddd2b4c7a6d6881ef0464a128.ctex"]
 
 [params]
 
